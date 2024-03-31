@@ -53,6 +53,7 @@ export const getStaticProps = async () => {
     return { props: { employees: employees.existingEmployee } }
   } catch (error) {
     console.error('Erreur lors de la récupération des employées :', error);
+    return { props: { services: [] } }
   }
 };
  
