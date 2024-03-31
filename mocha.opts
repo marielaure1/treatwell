@@ -1,0 +1,4 @@
+--recursive    // recherche récursive des fichiers de test
+--require @babel/register   // permet l'utilisation de syntaxe ES6/ES7 dans les tests
+--timeout 5000   // délai d'attente maximum pour chaque test en millisecondes
+--exit   // quitte automatiquement après l'exécution des tests
