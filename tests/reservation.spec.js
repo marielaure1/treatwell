@@ -37,7 +37,7 @@ describe('API Route: /api/reservation', async () => {
 
   it("Création d'une réservation - Format de date invalide", async () => {
     const response = await fetch(
-      `http://localhost:${port}/api/reservation`, 
+      `${BASE_URL}/api/reservation`, 
       {
           method: 'POST',
           headers: {
@@ -63,7 +63,7 @@ describe('API Route: /api/reservation', async () => {
 
   it("Création d'une réservation - Format de temps invalide", async () => {
     const response = await fetch(
-      `http://localhost:${port}/api/reservation`, 
+      `${BASE_URL}/api/reservation`, 
       {
           method: 'POST',
           headers: {
@@ -89,7 +89,7 @@ describe('API Route: /api/reservation', async () => {
 
   it("Création d'une réservation - Adresse email invalide", async () => {
     const response = await fetch(
-      `http://localhost:${port}/api/reservation`, 
+      `${BASE_URL}/api/reservation`, 
       {
           method: 'POST',
           headers: {
@@ -116,7 +116,7 @@ describe('API Route: /api/reservation', async () => {
 
   it("Création d'une réservation - Employé inexistant", async () => {
     const response = await fetch(
-      `http://localhost:${port}/api/reservation`, 
+      `${BASE_URL}/api/reservation`, 
       {
           method: 'POST',
           headers: {
@@ -143,7 +143,7 @@ describe('API Route: /api/reservation', async () => {
 
   it("Création d'une réservation - Service inexistant", async () => {
     const response = await fetch(
-      `http://localhost:${port}/api/reservation`, 
+      `${BASE_URL}/api/reservation`, 
       {
           method: 'POST',
           headers: {
@@ -170,7 +170,7 @@ describe('API Route: /api/reservation', async () => {
 
   it("Création d'une réservation - Succès", async () => {
     const response = await fetch(
-      `http://localhost:${port}/api/reservation`, 
+      `${BASE_URL}/api/reservation`, 
       {
           method: 'POST',
           headers: {
@@ -200,7 +200,7 @@ describe('API Route: /api/reservation', async () => {
 
   it("Création d'une réservation - Créneau non disponible", async () => {
     const response = await fetch(
-      `http://localhost:${port}/api/reservation`, 
+      `${BASE_URL}/api/reservation`, 
       {
           method: 'POST',
           headers: {
