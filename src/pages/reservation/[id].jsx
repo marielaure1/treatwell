@@ -27,7 +27,7 @@ import { Textarea } from "@/components/ui/textarea"
 import moment from 'moment';
 import 'moment-range';
 import 'dotenv/config';
-const port = process.env.PORT || 3000;
+const BASE_URL = process.env.BASE_URL || 3000;
 
 import { useToast } from "@/components/ui/use-toast"
 
@@ -48,7 +48,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async () => {
 
   try {
-    const res = await fetch('http://localhost:' + port + '/api/employee')
+    const res = await fetch(BASE_URL + '/api/employee')
     const employees = await res.json()
     return { props: { employees: employees.existingEmployee } }
   } catch (error) {

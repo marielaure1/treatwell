@@ -3,12 +3,10 @@ import fetch from 'node-fetch';
 import 'dotenv/config';
 
 describe('API Route: /api/employee', () => {
-  const port = process.env.PORT || 3000;
-
-  console.log(port);
+  const BASE_URL = process.env.BASE_URL || 3000;
 
   it('Récupérer les employées', async () => {
-    const response = await fetch(`http://localhost:${port}/api/employee`);
+    const response = await fetch(`${BASE_URL}/api/employee`);
     expect(response.status).to.equal(201);
     const responseData = await response.json();
     expect(responseData.message).to.equal('Employées récupéré avec succès');

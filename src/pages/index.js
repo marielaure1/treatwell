@@ -8,12 +8,12 @@ import {
 } from "@/components/ui/card"
 import Link from 'next/link'
 import 'dotenv/config';
-const port = process.env.PORT || 3000;
+const BASE_URL = process.env.BASE_URL || 3000;
 
 export const getStaticProps = async () => {
 
   try {
-    const res = await fetch('http://localhost:' + port + '/api/service')
+    const res = await fetch(BASE_URL + '/api/service')
     const services = await res.json()
     return { props: { services: services.existingServices } }
   } catch (error) {

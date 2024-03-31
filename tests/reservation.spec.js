@@ -6,13 +6,13 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 describe('API Route: /api/reservation', async () => {
-  const port = process.env.PORT || 3000;
+  const BASE_URL = process.env.BASE_URL || 3000;
   let reservationId;
   let lastTest = false;
 
   it("Création d'une réservation - Champ manquant", async () => {
       const response = await fetch(
-        `http://localhost:${port}/api/reservation`, 
+        `${BASE_URL}/api/reservation`, 
         {
             method: 'POST',
             headers: {
